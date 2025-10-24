@@ -177,3 +177,7 @@ details:hover summary {
 details[open] summary {
   color: #ff1493;
 }
+
+.flex-1.px-8.pt-8.lg\:pt-12.lg\:ml-\[16\.5rem\].lg\:px-16 {
+  padding-bottom: 2rem !important;
+}
