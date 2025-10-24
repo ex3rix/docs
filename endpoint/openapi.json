@@ -364,6 +364,11 @@
             "type": "string",
             "description": "Username"
           },
+          "alias": {
+            "type": "string",
+            "nullable": true,
+            "description": "User alias"
+          },
           "displayName": {
             "type": "string",
             "nullable": true,
@@ -453,14 +458,90 @@
             "type": "string",
             "description": "Background effects as a JSON string"
           },
+          "backgroundEffectSettings": {
+            "type": "object",
+            "description": "Background effect settings"
+          },
           "description": {
             "type": "string",
             "nullable": true,
             "description": "Profile description"
           },
+          "aboutMe": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me content"
+          },
+          "aboutMeTitle": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me title"
+          },
+          "aboutMeDescription": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me description"
+          },
+          "aboutMeEnabled": {
+            "type": "boolean",
+            "description": "Enable about me section"
+          },
+          "aboutMeCustomization": {
+            "type": "boolean",
+            "description": "Enable about me customization"
+          },
+          "aboutMeAccentColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me accent color"
+          },
+          "aboutMeTextColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me text color"
+          },
+          "aboutMeOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "About me opacity"
+          },
+          "aboutMeBorderCustomization": {
+            "type": "boolean",
+            "description": "Enable about me border customization"
+          },
+          "aboutMeBorderColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "About me border color"
+          },
+          "aboutMeBorderWidth": {
+            "type": "integer",
+            "nullable": true,
+            "description": "About me border width"
+          },
+          "aboutMeBorderRadius": {
+            "type": "integer",
+            "nullable": true,
+            "description": "About me border radius"
+          },
+          "aboutMeBorderOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "About me border opacity"
+          },
           "discordPresence": {
             "type": "boolean",
             "description": "Show Discord presence"
+          },
+          "discordPresenceLeft": {
+            "type": "string",
+            "nullable": true,
+            "description": "Discord presence left side"
+          },
+          "discordPresenceRight": {
+            "type": "string",
+            "nullable": true,
+            "description": "Discord presence right side"
           },
           "discordPresenceStatus": {
             "type": "boolean",
@@ -486,155 +567,51 @@
             "type": "boolean",
             "description": "Show Discord details"
           },
-          "discordServer": {
-            "type": "string",
-            "description": "Discord server preference"
+          "presenceCustomization": {
+            "type": "boolean",
+            "description": "Enable presence customization"
           },
-          "socialPreference": {
+          "presenceAccentColor": {
             "type": "string",
-            "description": "Social media preference"
+            "nullable": true,
+            "description": "Presence accent color"
           },
-          "robloxUsername": {
-            "type": "string",
-            "description": "Roblox username"
-          },
-          "telegramChannel": {
-            "type": "string",
-            "description": "Telegram channel"
-          },
-          "lastfmUsername": {
-            "type": "string",
-            "description": "Last.fm username"
-          },
-          "statsfmUsername": {
-            "type": "string",
-            "description": "Stats.fm username"
-          },
-          "location": {
-            "type": "string",
-            "description": "User location"
-          },
-          "profileBlur": {
+          "presenceOpacity": {
             "type": "integer",
-            "description": "Profile blur intensity"
+            "nullable": true,
+            "description": "Presence opacity"
           },
-          "profileOpacity": {
+          "presenceBorderCustomization": {
+            "type": "boolean",
+            "description": "Enable presence border customization"
+          },
+          "presenceBorderColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Presence border color"
+          },
+          "presenceBorderWidth": {
             "type": "integer",
-            "description": "Profile opacity"
+            "nullable": true,
+            "description": "Presence border width"
           },
-          "cursor": {
-            "type": "string",
-            "format": "uri",
-            "description": "Custom cursor URL"
-          },
-          "decoration": {
-            "type": "string",
-            "format": "uri",
-            "description": "Profile decoration URL"
-          },
-          "usernameEffect": {
-            "type": "string",
-            "description": "Username effects as a JSON string"
-          },
-          "accentColor": {
-            "type": "string",
-            "description": "Accent color hex code"
-          },
-          "textColor": {
-            "type": "string",
-            "description": "Text color hex code"
-          },
-          "backgroundColor": {
-            "type": "string",
-            "description": "Background color hex code"
-          },
-          "iconColor": {
-            "type": "string",
-            "description": "Icon color hex code"
-          },
-          "primaryColor": {
-            "type": "string",
-            "description": "Primary color hex code"
-          },
-          "secondaryColor": {
-            "type": "string",
-            "description": "Secondary color hex code"
-          },
-          "Gradient": {
-            "type": "boolean",
-            "description": "Enable gradient"
-          },
-          "gradientAngle": {
+          "presenceBorderRadius": {
             "type": "integer",
-            "description": "Gradient angle"
+            "nullable": true,
+            "description": "Presence border radius"
           },
-          "enterText": {
-            "type": "string",
-            "description": "Enter button text"
-          },
-          "volumeControl": {
-            "type": "boolean",
-            "description": "Enable volume control"
-          },
-          "parallax": {
-            "type": "boolean",
-            "description": "Enable parallax effect"
-          },
-          "badgeColor": {
-            "type": "string",
-            "description": "Badge color hex code"
-          },
-          "badgeMonochrome": {
-            "type": "boolean",
-            "description": "Monochrome badges"
-          },
-          "badgeGlow": {
-            "type": "boolean",
-            "description": "Badge glow effect"
-          },
-          "borderEnabled": {
-            "type": "boolean",
-            "description": "Enable border"
-          },
-          "borderColor": {
-            "type": "string",
-            "description": "Border color hex code"
-          },
-          "borderWidth": {
+          "presenceBorderOpacity": {
             "type": "integer",
-            "description": "Border width"
-          },
-          "borderRadius": {
-            "type": "integer",
-            "description": "Border radius"
-          },
-          "borderOpacity": {
-            "type": "integer",
-            "description": "Border opacity"
-          },
-          "viewsEnabled": {
-            "type": "boolean",
-            "description": "Show view count"
-          },
-          "iconGlow": {
-            "type": "boolean",
-            "description": "Icon glow effect"
-          },
-          "iconMonochrome": {
-            "type": "boolean",
-            "description": "Monochrome icons"
-          },
-          "shuffleAudio": {
-            "type": "boolean",
-            "description": "Shuffle audio tracks"
-          },
-          "audioPlayer": {
-            "type": "boolean",
-            "description": "Show audio player"
+            "nullable": true,
+            "description": "Presence border opacity"
           },
           "alias": {
             "type": "string",
             "description": "Profile alias"
+          },
+          "aliasRedirect": {
+            "type": "boolean",
+            "description": "Enable alias redirect"
           },
           "profileTitle": {
             "type": "string",
@@ -658,6 +635,33 @@
             "format": "uri",
             "description": "Profile banner URL"
           },
+          "profileAvatarEnabled": {
+            "type": "boolean",
+            "description": "Enable profile avatar"
+          },
+          "profileUsernameEnabled": {
+            "type": "boolean",
+            "description": "Enable profile username"
+          },
+          "profileLinkEnabled": {
+            "type": "boolean",
+            "description": "Enable profile link"
+          },
+          "profileAnimation": {
+            "type": "string",
+            "nullable": true,
+            "description": "Profile animation type"
+          },
+          "profileEnterAnimation": {
+            "type": "string",
+            "nullable": true,
+            "description": "Profile enter animation type"
+          },
+          "profileSoundEffect": {
+            "type": "string",
+            "nullable": true,
+            "description": "Profile sound effect"
+          },
           "typewriterDescriptions": {
             "type": "array",
             "items": {
@@ -668,6 +672,21 @@
           "typewriterEnabled": {
             "type": "boolean",
             "description": "Enable typewriter effect"
+          },
+          "typewriterSpeed": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Typewriter speed"
+          },
+          "typewriterDeleteSpeed": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Typewriter delete speed"
+          },
+          "typewriterDelay": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Typewriter delay"
           },
           "cursorEffect": {
             "type": "string",
@@ -685,6 +704,12 @@
             "type": "string",
             "description": "Font family"
           },
+          "fontCustom": {
+            "type": "string",
+            "nullable": true,
+            "format": "uri",
+            "description": "Custom font URL"
+          },
           "badgeGlowStrength": {
             "type": "integer",
             "description": "Badge glow strength"
@@ -697,13 +722,147 @@
             "type": "integer",
             "description": "Text glow strength"
           },
-          "profileFeedback": {
-            "type": "boolean",
-            "description": "Enable profile feedback"
+          "animatedTitleType": {
+            "type": "string",
+            "nullable": true,
+            "description": "Animated title type"
           },
           "animatedTitle": {
             "type": "boolean",
             "description": "Enable animated title"
+          },
+          "projectsMode": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects display mode"
+          },
+          "projectsTitle": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects section title"
+          },
+          "projectsDescription": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects section description"
+          },
+          "projectsCustomization": {
+            "type": "boolean",
+            "description": "Enable projects customization"
+          },
+          "projectsAccentColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects accent color"
+          },
+          "projectsTextColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects text color"
+          },
+          "projectsOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Projects opacity"
+          },
+          "projectsBorderCustomization": {
+            "type": "boolean",
+            "description": "Enable projects border customization"
+          },
+          "projectsBorderColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Projects border color"
+          },
+          "projectsBorderWidth": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Projects border width"
+          },
+          "projectsBorderRadius": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Projects border radius"
+          },
+          "projectsBorderOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Projects border opacity"
+          },
+          "skillsFrontend": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Frontend skills"
+          },
+          "skillsBackend": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Backend skills"
+          },
+          "skillsDatabase": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Database skills"
+          },
+          "skillsCore": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Core skills"
+          },
+          "skillsEnabled": {
+            "type": "boolean",
+            "description": "Enable skills section"
+          },
+          "skillsCustomization": {
+            "type": "boolean",
+            "description": "Enable skills customization"
+          },
+          "skillsAccentColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skills accent color"
+          },
+          "skillsTextColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skills text color"
+          },
+          "skillsOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Skills opacity"
+          },
+          "skillsBorderCustomization": {
+            "type": "boolean",
+            "description": "Enable skills border customization"
+          },
+          "skillsBorderColor": {
+            "type": "string",
+            "nullable": true,
+            "description": "Skills border color"
+          },
+          "skillsBorderWidth": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Skills border width"
+          },
+          "skillsBorderRadius": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Skills border radius"
+          },
+          "skillsBorderOpacity": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Skills border opacity"
           }
         }
       },
@@ -755,6 +914,11 @@
           "enabled": {
             "type": "boolean",
             "description": "Whether custom badge is enabled"
+          },
+          "createdAt": {
+            "type": "integer",
+            "format": "int64",
+            "description": "Unix timestamp when custom badge was created"
           }
         }
       },
@@ -783,6 +947,10 @@
             "type": "string",
             "nullable": true,
             "description": "Link color override"
+          },
+          "clicks": {
+            "type": "integer",
+            "description": "Number of clicks on this link"
           }
         }
       },
@@ -817,6 +985,12 @@
           "active": {
             "type": "boolean",
             "description": "Whether track is active"
+          },
+          "externalUrl": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true,
+            "description": "External URL for the audio track (e.g., YouTube link)"
           }
         }
       },
